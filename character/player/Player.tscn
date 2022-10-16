@@ -5,13 +5,17 @@
 [ext_resource path="res://character/player/Player.gd" type="Script" id=3]
 
 [node name="Player" instance=ExtResource( 1 )]
+position = Vector2( 3, -1 )
 collision_layer = 2
 collision_mask = 13
 script = ExtResource( 3 )
-speed = 0
+speed = 3
 
 [node name="Sprite" parent="." index="0"]
 texture = ExtResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="." index="8"]
 current = true
+
+[connection signal="area_entered" from="." to="." method="_on_Player_area_entered"]
+[connection signal="moved" from="." to="." method="_on_Player_moved"]

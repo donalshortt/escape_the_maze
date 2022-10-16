@@ -39,6 +39,5 @@ func move(dir):
 	$MoveTween.start()
 	return true
 
-
 func _on_MoveTween_tween_completed(_object:Object, _key:NodePath):
 	can_move = true
